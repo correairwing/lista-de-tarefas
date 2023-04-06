@@ -13,7 +13,7 @@ function adicionaLinha(){
     const inputNomeAtividades = document.getElementById('nomeAtividades')
 
     if(nomeAtividades.includes(inputNomeAtividades.value)) {
-        alert(`O contato já foi inserido`)
+        alert(`A atividade já foi inserida`)
     } else {
         nomeAtividades.push(inputNomeAtividades.value);
     
