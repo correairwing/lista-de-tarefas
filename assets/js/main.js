@@ -32,9 +32,3 @@ function atualizaTabela(){
     const corpoTabela = document.querySelector('ul')
     corpoTabela.innerHTML = linhas;
 }
-
-$(document).ready(function() {
-    $('button').click(function(){
-        $('form').slideDown();
-    })
-})
