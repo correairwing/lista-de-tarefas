@@ -7,6 +7,10 @@
 
 body {
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    width: 680px;
+    margin-left: 35%;
 }
 
 .notebookSheet {
@@ -14,6 +18,7 @@ body {
     max-width: 80hv;
     padding: 1.5rem;
     box-shadow: 2px 5px 10px rgba(128, 128, 128, 0.616);
+    width: 100%;
 }
 
 h1 {
@@ -23,6 +28,11 @@ h1 {
 
 ul li {
     border-bottom: .1rem solid #40b1e3;
+    cursor: pointer;
+}
+
+.tachado {
+    text-decoration: line-through;
 }
 
 form {
@@ -39,4 +49,3 @@ form input, button {
 button:hover {
     cursor: pointer;
 }
-

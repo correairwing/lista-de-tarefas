@@ -1,34 +1,12 @@
-const form = document.getElementById('listaAtividades')
-const nomeAtividades = [];
-
-let linhas = '';
-
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    adicionaLinha();
-    atualizaTabela();
+$(document).ready(function() {
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+        const novaTarefa = $('#nome-tarefa').val();
+        const novoLi = $(`<li>${novaTarefa}</li>`);
+        $(novoLi).appendTo('ul');
+        $('#nome-tarefa').val('');
+        $("li").click(function(){
+            $(this).addClass("tachado");
+        })
+    })
 })
-
-function adicionaLinha(){
-    const inputNomeAtividades = document.getElementById('nomeAtividades')
-
-    if(nomeAtividades.includes(inputNomeAtividades.value)) {
-        alert(`A atividade já foi inserida`)
-    } else {
-        nomeAtividades.push(inputNomeAtividades.value);
-    
-        let linha = '<ul>';
-        linha += `<li>${inputNomeAtividades.value}</li>`;
-        linha += `</ul>`;
-    
-        linhas += linha
-    }
-
-
-    inputNomeAtividades.value = '';
-}
-
-function atualizaTabela(){
-    const corpoTabela = document.querySelector('ul')
-    corpoTabela.innerHTML = linhas;
-}
